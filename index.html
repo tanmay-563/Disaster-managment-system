@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Disaster Management System</h1>
+        </header>
+
+        <section class="map-section">
+            <h2>Disaster Map</h2>
+            <div id="map"></div>
+        </section>
+        <section class="control-center-section">
+            <h2>Set Control Center</h2>
+            <form id="control-center-form">
+                <label for="controlLocation">Control Center Location:</label>
+                <input type="text" id="controlLocation" required placeholder="Enter control center location">
+                <button type="submit">Set Control Center</button>
+            </form>
+        </section>
+        
+
+        <section class="report-section">
+            <h2>Report a Disaster</h2>
+            <form id="report-form">
+                <label for="disasterType">Disaster Type:</label>
+                <select id="disasterType" required>
+                    <option value="Earthquake">Earthquake</option>
+                    <option value="Flood">Flood</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Hurricane">Hurricane</option>
+                </select>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" required placeholder="Enter location">
+
+                <button type="submit">Report Disaster</button>
+            </form>
+        </section>
+
+        <section class="incident-section">
+            <h2>Reported Incidents</h2>
+            <ul id="incident-list">
+                <!-- Reported incidents will appear here -->
+            </ul>
+        </section>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
